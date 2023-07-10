@@ -1,5 +1,5 @@
 # Imports
-from functions import set_todos
+from functions import get_todos,set_todos
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -11,8 +11,7 @@ TEXT_FILE = 'todos.txt'
 
 # Variables
 file = open(TEXT_FILE, 'r')
-todos = file.readlines()
-file.close()
+todos = get_todos(TEXT_FILE)
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 """ Script """

@@ -1,2 +1,6 @@
+swim
+walk
 run
-bike
+swim
+squash
+tennis
