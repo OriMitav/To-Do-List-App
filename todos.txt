@@ -3,4 +3,4 @@ walk
 run
 swim
 squash
-ping pongtennis
+tennis
