@@ -16,21 +16,23 @@ window = sg.Window('My to do app',
 
 while True:
     event, values = window.read()
-    print(event)
-    print(values)
     match event:
         case "Add":
             todos = functions.get_todos()
             new_todo = values['todo'] + "\n"
             todos.append(new_todo)
             functions.set_todos(todos)
+            window['todos'].update(values=todos)
         case "Edit":
-            todo_to_edit = values['todos']
+            todo_to_edit = values['todos'][0]
             new_todo = values['todo']
             todos = functions.get_todos()
             index = todos.index(todo_to_edit)
-            todos[index]
-            """Keep writing the code from here"""
+            todos[index] = new_todo
+            functions.set_todos(todos)
+            window['todos'].update(values=todos)
+        case 'todos':
+            window['todo'].update(values['todos'][0])
         case sg.WINDOW_CLOSED:
             break
 window.close()
