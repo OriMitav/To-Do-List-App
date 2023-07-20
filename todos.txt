@@ -1,6 +1,6 @@
-swim
+bike
 walk
 run
 swim
 squash
-tennis
+ping pongtennis
