@@ -50,3 +50,4 @@ while True:
             break
 
 window.close()
+
