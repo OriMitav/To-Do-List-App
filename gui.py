@@ -1,15 +1,20 @@
 import time
 import datetime
-
 import functions
 import PySimpleGUI as sg
+import os
 
+# Verify there is list exists, if not create one
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
+
+""" Editing the GUI visual"""
+# Feature
 clock = sg.Text('', key='clock')
 lable = sg.Text("Type in a to do")
 input_box = sg.InputText(tooltip="Enter to do", key="todo")
-
 sg.theme('DarkTeal11')
-""" Editing the GUI visual"""
 # Buttons
 add_button = sg.Button("Add")
 edit_button = sg.Button("Edit")
