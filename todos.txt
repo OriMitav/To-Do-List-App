@@ -1,5 +1,4 @@
 walk
-run
-swim
 squash
 tennis
+ping pong
